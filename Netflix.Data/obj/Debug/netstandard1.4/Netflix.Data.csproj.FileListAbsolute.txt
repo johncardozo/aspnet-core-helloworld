@@ -1,8 +1,0 @@
-c:\Playground\netflix_aspnet\Netflix.Data\bin\Debug\netstandard1.4\Netflix.Data.deps.json
-c:\Playground\netflix_aspnet\Netflix.Data\bin\Debug\netstandard1.4\Netflix.Data.dll
-c:\Playground\netflix_aspnet\Netflix.Data\bin\Debug\netstandard1.4\Netflix.Data.pdb
-c:\Playground\netflix_aspnet\Netflix.Data\bin\Debug\netstandard1.4\Netflix.Model.dll
-c:\Playground\netflix_aspnet\Netflix.Data\bin\Debug\netstandard1.4\Netflix.Model.pdb
-c:\Playground\netflix_aspnet\Netflix.Data\obj\Debug\netstandard1.4\Netflix.Data.AssemblyInfo.cs
-c:\Playground\netflix_aspnet\Netflix.Data\obj\Debug\netstandard1.4\Netflix.Data.dll
-c:\Playground\netflix_aspnet\Netflix.Data\obj\Debug\netstandard1.4\Netflix.Data.pdb

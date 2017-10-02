@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
-using Netflix.Model;
+using Netflix.Presentation.Models;
 
 namespace Netflix.Presentation.Controllers
 {
@@ -19,12 +19,6 @@ namespace Netflix.Presentation.Controllers
         {
             ViewData["Message"] = "Your application description page.";
 
-            Pelicula p = new Pelicula();
-            p.Id = 1;
-            p.Nombre = "Highlander";
-
-            ViewData["pelicula"] = p;
-
             return View();
         }
 
@@ -37,7 +31,7 @@ namespace Netflix.Presentation.Controllers
 
         public IActionResult Error()
         {
-            return View();
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

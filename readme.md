@@ -70,10 +70,24 @@ dotnet run
 ~~~
 
 ## Add Entity Framework separating entities and data access
-[Referencia en Internet](https://garywoodfine.com/using-ef-core-in-a-separate-class-library-project/)
+[Reference](https://garywoodfine.com/using-ef-core-in-a-separate-class-library-project/)
 
 1. Install Entity Framework to data tier
 ~~~
 cd Netflix.Data
 dotnet add package Microsoft.EntityFrameworkCore --version 2.0.0
+~~~
+
+2. Create a class name ApiContext in data tier
+~~~
+using System;
+using Microsoft.EntityFrameworkCore;
+
+namespace Netflix.Data
+{
+    public class ApiContext : DbContext
+    {
+        public ApiContext (DbContextOptions<ApiContext> options) : base(options){ }
+    }
+}
 ~~~

@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Netflix.Presentation.Models;
+using Netflix.Model;
+using Netflix.Business;
+
 
 namespace Netflix.Presentation.Controllers
 {
@@ -17,8 +20,17 @@ namespace Netflix.Presentation.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
+            // Get all movies
+            List<Movie> lista = MovieBusiness.GetGreaterThanNumber(3);
+            
+            // Create one movie
+            Movie m = new Movie(1, "Highlander");
+            m.Id = 6;
+            m.Name = "Braveheart";
+            
+            // Send data to view
+            ViewData["movie"] = m;
+            ViewData["lista"] = lista;
             return View();
         }
 

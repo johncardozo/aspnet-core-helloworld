@@ -1,7 +1,30 @@
-﻿@{
+﻿@using Netflix.Model
+
+@{
     ViewData["Title"] = "About";
+    Movie movie = (Movie) ViewData["movie"];
+    List<Movie> lista = (List<Movie>) ViewData["lista"];
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<h1>One movie</h1>
+<h3>Id: @movie.Id - Name: @movie.Name</h3>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
 
-<p>Use this area to provide additional information.</p>
+        @for(var i = 0; i < @lista.Count; i++)
+        {
+            <tr>
+                <td>@lista[i].Id</td>
+                <td>@lista[i].Name</td>
+            </tr>            
+        }
+    </tbody>
+    
+</table>         

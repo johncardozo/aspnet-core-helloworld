@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Presentation", "Netflix.Presentation\Netflix.Presentation.csproj", "{BB763456-379D-4328-B006-EFE961AEBBF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Web", "Netflix.Web\Netflix.Web.csproj", "{BB763456-379D-4328-B006-EFE961AEBBF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Business", "Netflix.Business\Netflix.Business.csproj", "{E5649155-3E02-473F-A142-DF0D740AF076}"
 EndProject

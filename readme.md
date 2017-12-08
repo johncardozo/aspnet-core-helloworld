@@ -1,10 +1,10 @@
-# ASP.NET MVC Core project - Microsoft .NET Core SDK - 2.0.0
-This project intent to show how to setup a web project using n-tiers architecture using Entity Framework.
+# ASP.NET MVC Core 2 project - Microsoft .NET Core SDK - 2.0.3
+This project intent to show how to setup a solution using n-tiers architecture using Entity Framework.
 .Net Core is used as framework for the solution. The IDE used for this example was VS Code.
 The model for this project is a "Netflix" example having only two entities: Movie and Category
 
 ## Prerequisites
-- Microsoft .NET Core SDK - 2.0.0
+- Microsoft .NET Core SDK - 2.0.3
 - Visual Studio Code
 
 ## Steps
@@ -14,9 +14,9 @@ The model for this project is a "Netflix" example having only two entities: Movi
 dotnet new sln --name Netflix
 ~~~
 
-2. Create presentarion tier (ASP.NET MVC project)
+2. Create presentarion tier (ASP.NET MVC Core2 - Angular project)
 ~~~
-dotnet new mvc --name Netflix.Presentation --framework netcoreapp2.0
+dotnet new angular --name Netflix.Web --framework netcoreapp2.0
 ~~~
 
 3. Create business tier (Class library project)
@@ -36,9 +36,9 @@ dotnet new classlib --name Netflix.Model --framework netcoreapp2.0
 
 6. Add references to presentation tier
 ~~~
-dotnet add Netflix.Presentation/Netflix.Presentation.csproj reference Netflix.Business/Netflix.Business.csproj
+dotnet add Netflix.Web/Netflix.Web.csproj reference Netflix.Business/Netflix.Business.csproj
 
-dotnet add Netflix.Presentation/Netflix.Presentation.csproj reference Netflix.Model/Netflix.Model.csproj
+dotnet add Netflix.Web/Netflix.Web.csproj reference Netflix.Model/Netflix.Model.csproj
 ~~~
 
 7. Add references to business tier
@@ -55,7 +55,7 @@ dotnet add Netflix.Data/Netflix.Data.csproj reference Netflix.Model/Netflix.Mode
 
 9. Add tier projects to solution
 ~~~
-dotnet sln Netflix.sln add Netflix.Presentation/Netflix.Presentation.csproj Netflix.Business/Netflix.Business.csproj Netflix.Data/Netflix.Data.csproj Netflix.Model/Netflix.Model.csproj
+dotnet sln Netflix.sln add Netflix.Web/Netflix.Web.csproj Netflix.Business/Netflix.Business.csproj Netflix.Data/Netflix.Data.csproj Netflix.Model/Netflix.Model.csproj
 ~~~
 
 10. Restore references to all projects in the solution
@@ -65,7 +65,7 @@ dotnet restore
 
 11. Run the project
 ~~~
-cd Netflix.Presentation
+cd Netflix.Web
 dotnet run
 ~~~
 
